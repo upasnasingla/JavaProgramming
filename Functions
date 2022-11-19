@@ -1,0 +1,86 @@
+import java.util.*;
+public class Main
+{
+    public static void printMyName(String name) {
+        System.out.println(name);
+        return;
+    }
+    
+    public static int multno(int no1,int no2){
+        int no3=no1*no2;
+        return no3;
+        
+    }
+    
+    
+     public static int factorialOfNo(int a){
+        int product=1;
+        while(a>=1){
+            product=product*a;
+            a--;
+        }
+        return product;
+    }
+    
+    public static void table(int a){
+         for(int i=1;i<=10;i++){
+             System.out.println(a*i);
+         }
+         return;
+    }
+    
+    
+    public static void check(int a){
+        if(a%2==0){
+            System.out.println("Even");
+        }
+        else{
+            System.out.println("Odd");
+        }
+        return;   //if dont write return then also fine
+    }
+    
+    
+    public static void checkPrime(int a){
+        int  flag=0;
+        for(int i=2;i<a;i++){
+            if(a%i==0){
+                flag=1;
+                break;
+            }
+        }
+        if(flag==1){
+            System.out.println("Not prime");
+        }
+        else{
+            System.out.println("Prime");
+        }
+        return;
+    }
+    
+    
+    
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    String name=sc.next();
+	    printMyName(name);
+	   
+	   int a=sc.nextInt();
+	   int b=sc.nextInt();
+	   System.out.println(multno(a,b));
+	   
+	   int a=sc.nextInt();
+	   System.out.println(factorialOfNo(a));
+	    
+	    int b=sc.nextInt();
+	    table(b);   //if any no is passed here will take input and then print table of no(10) written inside(table(10))
+	   
+	   int a=sc.nextInt();
+	   check(a);
+	   
+	   int a=sc.nextInt();
+	   checkPrime(a);
+		
+	}
+}
+
