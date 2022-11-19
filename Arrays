@@ -1,0 +1,88 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		int marks[]=new int[3];
+		marks[0]=20;
+		marks[1]=30;
+
+     int marks[]={1,2,3,4,5};
+    
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+		
+		for(int i=0;i<3;i++){
+		    System.out.println(marks[i]);
+		}
+
+  int [] marks=new int[n];
+  for(int i=0;i<n;i++){
+        marks[i]=sc.nextInt();
+  }
+
+  for(int i=0;i<n;i++){
+      System.out.println(marks[i]);
+  }
+
+    int numb[]=new int[n];
+    for(int i=0;i<n;i++){
+        numb[i]=sc.nextInt();
+    }
+    int ele=sc.nextInt();
+    for(int i=0;i<numb.length;i++){
+        if(numb[i]==ele){
+            System.out.println("nunber is: "+numb[i]+" present at: "+i);
+            break;
+        }
+    }
+    
+    
+    //Q1:Take an array of names as input from the user and print them on the screen.
+    String names[]=new String[n];
+    for(int i=0;i<n;i++){
+        names[i]=sc.next();
+    }
+    for(int i=0;i<n;i++){
+        System.out.println(names[i]);
+    }
+    
+    
+    //Q2:Find the maximum & minimum number in an array of integers.
+    int num[]=new int[n];
+    for(int i=0;i<num.length;i++){
+        num[i]=sc.nextInt();
+    }
+    int min=Integer.MAX_VALUE;
+    int max=Integer.MIN_VALUE;
+    for(int i=0;i<num.length;i++){
+        if(num[i]>max){
+            max=num[i];
+        }
+        if(num[i]<min){
+            min=num[i];
+        }
+    }
+    System.out.println(max+" "+min);
+    
+    //Q3:Take an array of numbers as input and check if it is an array sorted in ascending order.
+     int arr[]=new int[n];
+     for(int i=0;i<arr.length;i++){
+         arr[i]=sc.nextInt();
+     }
+     for(int i=0;i<arr.length;i++){
+         for(int j=i+1;j<n-1;j++){
+         if(arr[j]<arr[i]){
+             int temp=arr[i];
+             arr[i]=arr[j];
+             arr[j]=temp;
+         }
+         }
+     }
+     for(int i=0;i<n;i++){
+         System.out.println(arr[i]);
+     }
+
+	}
+}
+
+
