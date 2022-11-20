@@ -1,0 +1,162 @@
+import java.util.*;
+//String Builders->Since strings are immutable in nature so any kind of updation took a long time bcoz of which we required more optimized 
+//string class named String Builder which can perform any updation in string with less time and hence for any updation we use string builder
+//In strings as we update anything str changes its reference whereas in string builder str points to same and updation happens at same reference
+
+public class Main
+{
+	public static void main(String[] args) {
+		String str="Upa";
+		System.out.println(str);
+		str="pl";
+		System.out.println(str);
+
+    StringBuilder sb=new StringBuilder("Tony");
+       System.out.println(sb);
+       
+       //char at index;
+       stem.out.println(sb.charAt(0));
+       
+       //set char at
+      sb.setCharAt(0,'P');
+      System.out.println(sb);
+    
+    //insert at
+    sb.insert(0,'S');
+    System.out.println(sb);
+    sb.insert(2,'U');
+    System.out.println(sb);
+    
+    //delete 
+    System.out.println(sb);
+  sb.delete(2,4); //4th index not included
+    System.out.println(sb);
+
+
+  //append i.e join something at end   
+  StringBuilder st=new StringBuilder("h");    //append is happening in same StringBuilder so time less
+  st.append('e');
+  st.append('l');
+  st.append('l');
+  st.append('o');
+  System.out.println(st);
+  System.out.println(st.length());
+
+
+//append using String
+String st=new String("a");
+st=st+'b';            //new string is created everytime so takes time more
+System.out.println(st);
+  
+  
+  //reverse a string
+  StringBuilder st=new StringBuilder("hello");
+  for(int i=0;i<st.length()/2;i++){
+      int front=i;import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    //strings are objects in java
+		Scanner sc=new Scanner(System.in);   //Scanner->class sc->object new->object define
+		String a=sc.nextLine();
+		System.out.println(a);
+		
+		
+		//concatenation
+		String fname="Upasna";
+		String lname="Singla";
+		String fullname=fname+" "+lname;
+		System.out.println(fullname);
+
+        //length
+        String a="hi i am @";
+        System.out.println(a.length());
+        
+        //print each character of String
+        String a="hi i am ";
+        for(int i=0;i<a.length();i++){
+            System.out.println(a.charAt(i));
+        }
+        
+        
+        //compare two Strings  ->in this a is smaller than b and it compares aplhabet by alphabet
+         String name1="aTonyq cfgd";
+         String name2="ZTon";
+         System.out.println(name1.length());
+        if(name1.compareTo(name2)==0){
+            System.out.println("Strings are equal");
+        }
+        else if(name1.compareTo(name2)>0){
+            System.out.println("name1 is greater");   //s1=name1  if s1>s2 ->+ve
+             
+        }
+        else{
+            System.out.println("Name 2 is greater"); 
+        }
+        
+        if(name1==name2){   //this way of comparison fails in many test cases 
+            System.out.println("strings equal");
+        }
+        else{
+            System.out.println("strings not equal");
+        }
+        
+        if(new String("Tony")==new String("Tony")){
+            System.out.println("equal");
+        }
+        else{
+            System.out.println("not equal");
+        }
+        
+        String name1 = "Tony";
+      String name2 = "Tony";
+ 
+      if(name1.equals(name2)) {
+          System.out.println("They are the same string");
+      } else {
+          System.out.println("They are different strings");
+      }
+
+        //SUBSTRINGS
+        String name="upasna is great";
+        String part=name.substring(3,name.length());   substring beg index->include  ending index does not include
+        String part=name.substring(3);   //by default ending index is last
+        String part=name.substring(3,5);
+        System.out.println(part);
+        
+        
+        //Type conversion
+        //converting String to Number
+        String str="123";
+        int no=Integer.parseInt(str);
+        System.out.println(no+2);
+        
+        //converting Integer to String
+        int number=123;
+        int number1=567;
+        String str=Integer.toString(number);
+        String str1=Integer.toString(number1);
+        String str2=str+str1;
+        System.out.println(str2);
+        
+    
+        //System.out.println(A.substring(0,1).toUpperCase().concat(A.substring(1,A.length()))+" "+B.substring(0,1).toUpperCase().concat(B.substring(1,B.length())));
+	}
+}
+
+
+
+
+      int back=st.length()-1-i;
+      
+      char frontChar=st.charAt(front);
+      char backchar=st.charAt(back);
+      
+      st.setCharAt(front,backchar);
+      st.setCharAt(back,frontChar);
+  }
+    System.out.println(st);
+	}
+}
+
+
