@@ -1,0 +1,48 @@
+//HashSet->data structure which contains unique elements.used to decrease time complexity (hashing) and make codes more efficient.HashSet is the most
+//efficient daa structure bcoz insert delete search is done in O(1).
+//Set does not have any index so iteraror for i=0 one method cant be used
+//unordered set i.e has no guarantee of how elements will be displayed on screen
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	//Creating
+	HashSet<Integer> set=new HashSet<>();
+	//insert
+	set.add(1);
+	set.add(2);
+	set.add(3);
+	set.add(1);   //does not add bcoz of duplication
+	
+	//search
+	if(set.contains(1)){
+	    System.out.println("Contains");
+	}
+	else{
+	    System.out.println("Not contains");
+	}
+	if(!set.contains(6)){
+	    System.out.println("Not contains");
+	}
+	//remove
+	set.remove(1);
+	if(!set.contains(1)){
+	    System.out.println("Not contains now");
+	    
+	}
+	//size of set
+	System.out.println("size of set is:"+set.size());
+	
+	//Display elements of set
+	System.out.println(set);
+	
+	//Iterator->contains 2 functions ->hasNext()->returns true(if value is present at next)/false or next()->returns value
+	Iterator it=set.iterator();
+	while(it.hasNext()){
+	    System.out.println(it.next());
+	}
+	
+	}
+}
+
+
