@@ -1,0 +1,20 @@
+static class Info{
+        int dim;
+        int ht;
+        Info(int dim,int ht){
+            this.dim=dim;
+            this.ht=ht;
+        }
+    }
+    public static Info diameter2(Node root){   //O(n)
+        if(root==null)
+        {
+            return new Info(0,0);
+        }
+        Info leftInfo=diameter2(root.left);
+        Info rightInfo=diameter2(root.right);
+        int dim=Math.max(Math.max(leftInfo.dim,rightInfo.dim),leftInfo.ht+rightInfo.ht+1);
+        int ht=Math.max(leftInfo.ht,rightInfo.ht)+1;
+        
+        return new Info(dim,ht);
+    }
