@@ -1,0 +1,10 @@
+public static int sumofNodes(Node root){   //(O(n))
+        if(root==null){
+            return 0;
+        }
+        int sumofleft=sumofNodes(root.left);
+        int sumofright=sumofNodes(root.right);
+        int total=sumofright+sumofleft+root.data;
+        return total;
+    }
+    
