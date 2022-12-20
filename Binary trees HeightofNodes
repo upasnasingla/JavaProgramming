@@ -1,0 +1,10 @@
+ public static int height(Node root){   //(O(n))
+        if(root==null){
+            return 0;
+        }
+        int leftheight=height(root.left);
+        int rightheight=height(root.right);
+        
+        int total=Math.max(leftheight,rightheight)+1;
+        return total;
+    }
