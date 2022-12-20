@@ -1,0 +1,21 @@
+public static int height(Node root){   //(O(n))
+        if(root==null){
+            return 0;
+        }
+        int leftheight=height(root.left);
+        int rightheight=height(root.right);
+        
+        int total=Math.max(leftheight,rightheight)+1;
+        return total;
+    }
+    public static int diameter(Node root){   //(O(n^2))
+        if(root==null){
+            return 0;
+        }
+        int dim1=diameter(root.left);
+        int dim2=diameter(root.right);
+        
+        int total=height(root.left)+height(root.right)+1;
+        return Math.max(total,Math.max(dim1,dim2));
+        
+    }
