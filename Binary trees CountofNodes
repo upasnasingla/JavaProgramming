@@ -1,0 +1,9 @@
+public static int countofNodes(Node root){    //(O(n))
+        if(root==null){
+            return 0;
+        }
+        int leftNodes=countofNodes(root.left);
+        int rightNodes=countofNodes(root.right);
+        
+        return leftNodes+rightNodes+1;
+    }
