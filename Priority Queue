@@ -1,0 +1,45 @@
+//Priority Queue:By default the min integer has the highest priority.add and remove take (O(log n))time and pop takes O(1) time.
+//To set priority in class a special interface is used called Comparable 
+import java.util.*;
+public class Main
+{
+    static class Student implements Comparable<Student>{
+        String name;
+        int rank;
+        
+        Student(String name,int rank){
+            this.name=name;
+            this.rank=rank;
+        }
+    
+    @Override
+    public int compareTo(Student s2){  
+        return this.rank-s2.rank;        //a predefined function compareto is present in Comparable which might give priority to either name or rank.Now since the func is overriden so gives priority to rank
+    }
+}
+	public static void main(String[] args) {
+	//PriorityQueue<Integer> pq=new PriorityQueue<>();
+// 	PriorityQueue<Integer> pq=new PriorityQueue<>(Comparator.reverseOrder());  //Comparator is used to give logic og ascending or desc ang reverseorder 
+// 	                                                                         //reverse that order
+// 	pq.add(10);
+// 	pq.add(25);
+// 	pq.add(-9);
+	
+// 	while(!pq.isEmpty()){
+// 	    System.out.println(pq.peek());
+// 	    pq.remove();
+// 	}
+
+   PriorityQueue<Student>pq=new PriorityQueue<>();
+   pq.add(new Student("pashi",4));
+   pq.add(new Student("zas",10));
+   pq.add(new Student("zain",3));
+   
+   while(!pq.isEmpty()){
+       System.out.println(pq.peek().name+" "+pq.peek().rank);
+       pq.remove();
+   }
+
+	}
+
+}
